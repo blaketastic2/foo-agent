@@ -1,0 +1,5 @@
+flytekit==1.14.0b6
+dataclasses-json
+grpcio==1.68.0
+pydantic
+setuptools
