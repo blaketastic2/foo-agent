@@ -1,5 +1,7 @@
-flytekit==1.14.0b6
+flytekit>=1.15.1
 dataclasses-json
-grpcio==1.68.0
+grpcio==1.67.1
+httpx
 pydantic
+pytest
 setuptools

@@ -9,7 +9,7 @@ echo = Echo(name="echo", inputs={"message": str})
 
 
 @task
-def foos_task(foos: typing.Optional[typing.List[Foo]]) -> str:
+def baz_task(foos: typing.Optional[typing.List[Foo]]) -> str:
     if not foos:
         return "no foos"
     return f"hi {foos}"
@@ -18,7 +18,7 @@ def foos_task(foos: typing.Optional[typing.List[Foo]]) -> str:
 @workflow
 def foo_wf() -> None:
     res = foo_task(foos=[Foo(val="a"), Foo(val="b")])
-    foos_task(foos=res.foos)
+    baz_task(foos=res.foos)
 
 
 if __name__ == "__main__":

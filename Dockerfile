@@ -11,7 +11,7 @@ LABEL org.opencontainers.image.source=https://github.com/flyteorg/flytekit
 RUN apt-get update && apt-get install build-essential -y
 
 RUN pip install --upgrade uv
-RUN pip install prometheus-client grpcio-health-checking
+RUN pip install prometheus-client grpcio-health-checking==1.67.1
 RUN pip install --no-cache-dir -U flytekit==${FLYTEKIT_VERSION} \
   && apt-get clean autoclean \
   && apt-get autoremove --yes \
